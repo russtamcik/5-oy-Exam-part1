@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import request from "../../server";
 import "../../sass/BlogSection.scss";
 
-import "swiper/css";
+
 import foto from "../../assets/images/png/two-women.png";
 import { Link } from "react-router-dom";
 
