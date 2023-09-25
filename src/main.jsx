@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 
 import App from "./App.jsx";
 
-import "swiper/css";
 import "./index.css";
 import AuthContextProvider from "./contexts/AuthContext.jsx";
 
