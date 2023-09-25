@@ -3,9 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import request from "../../server";
 
+import "swiper/css";
 import "../../sass/CategorySection.scss";
 import busines from "../../assets/images/svg/busines.svg";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CatgeorySection = () => {
   const [data, setData] = useState([]);
