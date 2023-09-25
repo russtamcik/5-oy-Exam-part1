@@ -1,0 +1,45 @@
+.categories {
+  h1 {
+    margin-top: 69px;
+    text-align: center;
+    color: var(--Black, #232536);
+    font-family: Sen;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2px;
+  }
+
+  .card-box {
+    border: 1px solid #ccc;
+    padding: 31px;
+    margin-bottom: 73px;
+    margin-top: 70px;
+    transition: all 0.5s linear;
+
+
+    .name {
+      color: var(--Black, #232536);
+      font-family: Sen;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: -1px;
+    }
+
+    .card-desc {
+      color: var(--Medium-grey, #6D6E76);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+
+  .card-box:hover {
+    background-color: #FFD050;
+  }
+}

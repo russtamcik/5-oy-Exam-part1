@@ -1,0 +1,52 @@
+.register {
+  margin-top: 69px;
+
+  .title {
+    p {
+      color: #232536;
+      text-align: center;
+      font-family: Sen;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 64px;
+      letter-spacing: -2px;
+    }
+  }
+
+  .form {
+    margin-top: 68px;
+    margin-bottom: 158px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+
+
+
+    input {
+      border-radius: 2px;
+      border: 1px solid rgba(109, 110, 118, 0.50);
+      padding: 24px;
+      max-width: 768px;
+      width: 100%;
+    }
+
+
+
+    button {
+      width: 100%;
+      max-width: 768px;
+      color: var(--Black, #232536);
+      font-family: Sen;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px;
+      border: none;
+      cursor: pointer;
+      padding: 16px;
+      background-color: var(--Yellow, #FFD050);
+    }
+  }
+}

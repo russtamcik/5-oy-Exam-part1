@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Sen';
+  src: url('./assets/fonts/Sen/Sen-Bold.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  color: rgb(184, 77, 24);
+}
