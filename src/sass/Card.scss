@@ -13,6 +13,8 @@
     }
 
     .card-title {
+      flex-wrap: wrap;
+
       h3 {
         color: var(--Purple, #592EA9);
         font-family: Inter;
@@ -28,11 +30,11 @@
         margin-top: 20px;
         color: var(--Black, #232536);
         font-family: Sen;
-        font-size: 36px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 700;
         line-height: 48px;
-        letter-spacing: -2px;
+        letter-spacing: -1px;
       }
 
       p {
@@ -43,6 +45,34 @@
         font-style: normal;
         font-weight: 400;
         line-height: 28px;
+      }
+    }
+
+    .btns {
+      display: flex;
+      gap: 10px;
+
+      .edit {
+        background-color: blue;
+        color: #fff;
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 10px;
+        border: none;
+        font-family: sen;
+        cursor: pointer;
+
+      }
+
+      .delete {
+        background-color: red;
+        color: #fff;
+        padding: 10px 15px;
+        margin: 5px;
+        border-radius: 10px;
+        border: none;
+        font-family: sen;
+        cursor: pointer;
       }
     }
   }

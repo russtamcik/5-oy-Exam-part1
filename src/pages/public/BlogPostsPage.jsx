@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import request from "../server";
+import request from "../../server";
 
-import "../sass/BlogPost.scss";
-import photo from "../assets/images/png/women.png";
+import "../../sass/BlogPost.scss";
+
+import { ENDPOINT } from "../../constants";
 
 const BlogPostsPage = () => {
   const { blogId } = useParams();
@@ -36,9 +37,22 @@ const BlogPostsPage = () => {
           <div className="loading">Please wait...</div>
         ) : (
           <div className="blog-info">
-            <img width="100%" src={photo} alt="img" />
+            <img
+              width="100%"
+              src={`${ENDPOINT}upload/${data.photo._id}.${
+                data.photo.name.split(".")[1]
+              }`}
+              alt="Photo Not Found"
+            />
             <div className="blog-avatar">
-              <img width="50" height={50} src={photo} alt="" />
+              <img
+                width="50"
+                height={50}
+                src={`${ENDPOINT}upload/${data.photo._id}.${
+                  data.photo.name.split(".")[1]
+                }`}
+                alt="Photo Not Found"
+              />
               <div className="ava-info">
                 <p className="full-name">
                   {data.user.first_name} {data.user.last_name}
@@ -47,16 +61,16 @@ const BlogPostsPage = () => {
               </div>
             </div>
             <div className="blog-hero">
-              <p className="blog-title">{data.category.description}</p>
+              <p className="blog-title">{data.description}</p>
             </div>
             <div className="blog-start">
               <p className="blog-biznes">
-                Startup (#{data.category.name}, #screen, #life)
+                Startup (#{data.name}, #screen, #life)
               </p>
             </div>
             <div className="blog-lorem">
-              <p>{data.category.description}</p>
-              <p>{data.category.description}</p>
+              <p>{data.description}</p>
+              <p>{data.description}</p>
             </div>
           </div>
         )}

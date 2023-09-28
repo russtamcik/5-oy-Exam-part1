@@ -1,6 +1,6 @@
-import "../sass/AboutPage.scss";
-import foto from "../assets/images/png/friends.png";
-import foto2 from "../assets/images/png/three-friends.png";
+import "../../sass/AboutPage.scss";
+import foto from "../../assets/images/png/friends.png";
+import foto2 from "../../assets/images/png/three-friends.png";
 
 const AboutUsPage = () => {
   return (

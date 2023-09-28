@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import request from "../server";
-import Card from "../components/card/Card";
+import request from "../../server";
+import Card from "../../components/card/Card";
 
-import "../sass/Allposts.scss";
+import "../../sass/Allposts.scss";
 
 const AllPostsPage = () => {
   const [data, setData] = useState([]);

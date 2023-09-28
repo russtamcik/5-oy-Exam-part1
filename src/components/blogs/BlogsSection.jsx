@@ -56,7 +56,7 @@ const BlogsSection = () => {
         <h1>Popular blogs</h1>
 
         {loading ? (
-          <div>Loading...</div>
+          <div className="loading">Please wait...</div>
         ) : (
           <Swiper
             spaceBetween={50}
@@ -71,13 +71,9 @@ const BlogsSection = () => {
                     <img src={foto} alt="img" />
                   </Link>
                   <p className="info">
-                    By{" "}
-                    <span>
-                      {el.user.first_name} {el.user.last_name}
-                    </span>{" "}
-                    | {el.createdAt.split("T")[0]}
+                    By <span>{el.title}</span> | {el.createdAt.split("T")[0]}
                   </p>
-                  <p className="lor">{el.category.description}</p>
+                  <p className="lor">{el.description}</p>
                   <p className="lor-2">{el.description}</p>
                 </div>
               </SwiperSlide>

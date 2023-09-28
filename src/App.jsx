@@ -3,20 +3,27 @@ import { ToastContainer } from "react-toastify";
 import { useContext } from "react";
 import { AuthContext } from "./contexts/AuthContext";
 
-import HomePage from "./pages/HomePage";
 import FrontLayout from "./components/layout/front";
-import CategoryPage from "./pages/CategoryPage";
-import AllPostsPage from "./pages/AllPostsPage";
-import BlogPostsPage from "./pages/BlogPostsPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import RegisterPage from "./pages/RegisterPage";
-import LoginPage from "./pages/LoginPage";
-import AccountPage from "./pages/AccountPage";
-import MyPostsPage from "./pages/MyPostsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+
+import HomePage from "./pages/public/HomePage";
+import CategoryPage from "./pages/public/CategoryPage";
+import AllPostsPage from "./pages/public/AllPostsPage";
+import BlogPostsPage from "./pages/public/BlogPostsPage";
+import AboutUsPage from "./pages/public/AboutUsPage";
+import RegisterPage from "./pages/public/RegisterPage";
+import LoginPage from "./pages/public/LoginPage";
+import NotFoundPage from "./pages/public/NotFoundPage";
+
+import MyPostsPage from "./pages/user/MyPostsPage";
+
+import AccountPage from "./pages/common/AccountPage";
+import DashboardPage from "./pages/admin/dashboard";
+import CategoriesPage from "./pages/admin/categories";
+import UsersPage from "./pages/admin/users";
+import AdminLayout from "./components/layout/admin";
 
 function App() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, role } = useContext(AuthContext);
   return (
     <BrowserRouter>
       <ToastContainer />
@@ -49,6 +56,13 @@ function App() {
             }
           />
         </Route>
+        {isAuthenticated && role === "admin" ? (
+          <Route path="/" element={<AdminLayout />}>
+            <Route path="dashboard" element={<DashboardPage />} />
+            <Route path="categories" element={<CategoriesPage />} />
+            <Route path="users" element={<UsersPage />} />
+          </Route>
+        ) : null}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

@@ -1,12 +1,12 @@
 import { Fragment, useState, useEffect } from "react";
 
-import HeroSection from "../components/hero/HeroSection";
-import BlogsSection from "../components/blogs/BlogsSection";
-import CatgeorySection from "../components/category/CatgeorySection";
+import HeroSection from "../../components/hero/HeroSection";
+import BlogsSection from "../../components/blogs/BlogsSection";
+import CatgeorySection from "../../components/category/CatgeorySection";
 
 import "swiper/css";
-import "../sass/HomePage.scss";
-import "../sass/HeroSection.scss";
+import "../../sass/HomePage.scss";
+import "../../sass/HeroSection.scss";
 
 const HomePage = () => {
   const [loading, setLoading] = useState(true);

@@ -39,6 +39,13 @@
       line-height: 32px;
       border: none;
       padding: 16px;
+      cursor: pointer;
+      transition: all 0.5s linear;
+    }
+
+    button:hover {
+      background-color: #685d40;
+      color: #fff;
     }
   }
 }

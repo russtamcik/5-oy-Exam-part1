@@ -1,0 +1,139 @@
+.users-section {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  margin-top: 30px;
+
+  thead {
+    border: 2px solid #666;
+
+    tr {
+      th {
+        font-family: inter;
+      }
+
+    }
+  }
+
+  .t-body {
+    text-align: center;
+
+    tr {
+      border: 1px solid #666666;
+
+      td {
+        font-family: sen;
+        border: 1px solid #ccc;
+      }
+    }
+
+    .edit {
+      background-color: blue;
+      color: #fff;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 10px;
+      border: none;
+      font-family: sen;
+      cursor: pointer;
+
+    }
+
+    .delete {
+      background-color: red;
+      color: #fff;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 10px;
+      border: none;
+      font-family: sen;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: flex;
+      gap: 5px;
+    }
+  }
+}
+
+.form-category {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+
+  .form {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-family: sen;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .category-desc {
+    margin-top: 10px;
+  }
+
+  .category-name {
+    font-family: sen;
+    font-size: 15px;
+    display: flex;
+  }
+
+  input {
+    border-radius: 10px;
+    padding: 10px 25px;
+  }
+
+  .btns {
+    display: flex;
+    gap: 20px;
+
+    button {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-family: sen;
+      cursor: pointer;
+    }
+
+    button:nth-child(1) {
+      background-color: blue;
+      color: #fff;
+      transition: all 0.3s linear;
+
+    }
+
+    button:nth-child(1):hover {
+      background-color: red;
+      color: #fff;
+    }
+
+    button:nth-child(2) {
+      background-color: red;
+      color: #fff;
+      transition: all 0.3s linear;
+    }
+
+    button:nth-child(2):hover {
+      background-color: blue;
+      color: #fff;
+    }
+  }
+}

@@ -57,7 +57,7 @@ const CatgeorySection = () => {
           >
             {data.map((el, id) => (
               <SwiperSlide key={id}>
-                <Link to={`/category/${el.name}`}>
+                <Link to={`/category/${el._id}`}>
                   <div className="card-box">
                     <img src={busines} alt="" />
                     <p className="name">{el.name}</p>

@@ -1,4 +1,4 @@
-import "../sass/Register.scss";
+import "../../sass/Register.scss";
 
 const RegisterPage = () => {
   return (

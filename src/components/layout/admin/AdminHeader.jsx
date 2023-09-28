@@ -1,12 +1,11 @@
-import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../contexts/AuthContext";
+import { NavLink } from "react-router-dom";
 
-import "../../../sass/Header.scss";
 import logo from "../../../assets/images/svg/logo.svg";
 import bars from "../../../assets/images/png/bars.png";
 
-const Header = () => {
+const AdminHeader = () => {
   const { isAuthenticated } = useContext(AuthContext);
   const [openBars, setOpenBars] = useState(false);
   const open = () => {
@@ -31,14 +30,11 @@ const Header = () => {
           )}
           <ul className={`nav-item ${openBars ? "open" : "close"}`}>
             <li className="nav-menu">
-              <NavLink to="/dashboard">Dashboard</NavLink>
-            </li>
-            <li className="nav-menu">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/categories">Category</NavLink>
             </li>
 
             <li className="nav-menu">
-              <NavLink to="/allposts">Blog</NavLink>
+              <NavLink to="/users">Users</NavLink>
             </li>
             <li className="nav-menu">
               <NavLink to="/aboutus">About Us</NavLink>
@@ -67,4 +63,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AdminHeader;
